@@ -11,4 +11,3 @@ app.use(express.json())
 app.use(routes)
 // configurando a porta
 app.listen(3333)
-asdas
