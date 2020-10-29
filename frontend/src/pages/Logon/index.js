@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { FiLogIn } from 'react-icons/fi'
 import './styles.css'
 
@@ -11,16 +11,19 @@ import heroesImg from '../../assets/heroes.png'
  export default function Logon () {
 
   const [id, setId] = useState('')
+  const history = useHistory()
 
+  // função para login
   async function handleLogin(e){
 
-    e.preventDefault()
+    e.preventDefault() //não deixa a pagina recarrega
 
     try{
-      const response = await api.post('sessions', { id })
+      const response = await api.post('sessions', { id }) //enviando o ID para a rota de login (vendo se existe)
 
-      localStorage.setItem('ongId', id)
-      localStorage.setItem('ongName', response.data.name)
+      localStorage.setItem('ongId', id) // salvando o id da ong no localstorage
+      localStorage.setItem('ongName', response.data.name) // salvando o nome da ong
+      history.push('/profile')
     } catch (err){
       alert('Erro ao localizar ONG')
       console.log('erro' + err)

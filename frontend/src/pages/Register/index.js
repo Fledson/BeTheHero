@@ -36,8 +36,8 @@ export default function Register(){
     try {
       // passsando informações para o backend via http post e armazenando no response o retorno se deu certo ou não
       const response = await api.post('ongs', data)
-      alert(`Seu ID de acessp: ${response.data.id}`)
-      history.push('/')
+      alert(`Seu ID de acesso: ${response.data.id}`)
+      history.push('/') //manda o usuario para a home
     }catch (err) {
       alert('Erro no cadastro, tente novamente!')
     }
