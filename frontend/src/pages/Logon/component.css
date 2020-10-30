@@ -1,0 +1,24 @@
+.input-teste{
+  border-radius: 3px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s;
+}
+
+.input-teste:focus-within {
+  color: red;
+  border: 1px solid red;
+}
+
+.input-teste svg {
+  margin: 5px;
+}
+
+.input-teste input {
+  background-color: transparent;
+  color: black;
+  border: none;
+}

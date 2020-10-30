@@ -8,6 +8,8 @@ import api from '../../services/api'
 import logoImg from '../../assets/logo.svg'
 import heroesImg from '../../assets/heroes.png'
 
+// import {Input, Botao} from './component'
+
  export default function Logon () {
 
   const [id, setId] = useState('')
@@ -33,6 +35,9 @@ import heroesImg from '../../assets/heroes.png'
 
   return (
     <div className="logon-container">
+     
+     {/* <Input icon={<FiLogIn/>}/> */}
+
       <section className="form">
         <img src={logoImg} alt="Be The Hero"/>
 

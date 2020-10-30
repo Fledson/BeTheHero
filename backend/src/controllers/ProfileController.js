@@ -8,6 +8,6 @@ module.exports = {
     const caso_especifico = await connection('casos')
                                   .where('ong_id', ong_id)
                                   .select('*')
-    
+    return response.status(200).json(caso_especifico) //não esquecer de retornar a função
   }
 }

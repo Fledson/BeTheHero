@@ -20,7 +20,7 @@ export default function Register(){
   const history = useHistory() 
 
   // função que vai registrar os casos
-  async function handleRegistre(e){
+  async function registrarOng(e){
     // linha abaixo usa a função chamada para não recarregar a pagina ao chamar o submit
     e.preventDefault();
 
@@ -60,7 +60,7 @@ export default function Register(){
             Voltar para o Logon  
           </Link>
         </section>
-        <form onSubmit={handleRegistre}>
+        <form onSubmit={registrarOng}>
           <input
             placeholder="Nome da ONG"
             value={name}
